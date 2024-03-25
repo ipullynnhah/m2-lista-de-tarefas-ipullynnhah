@@ -34,6 +34,11 @@ function createTaskItem(taskObj) {
   div.appendChild(span);
   div.appendChild(p);
 
+  button.addEventListener("click", () => {
+    const indexToRemove = tasks.indexOf(taskObj);
+    tasks.splice(indexToRemove, 1);
+    renderElements(tasks);
+  });
   return li;
 }
 
@@ -62,7 +67,7 @@ newTaskBtn.addEventListener("click", e => {
 
   const type = selectPriority.value;
   selectPriority.value = "";
-  
+
   tasks.push({ title, type });
   renderElements(tasks);
 });
