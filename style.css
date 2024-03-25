@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+body {
+  background-color: #e2e2e2;
+  font-family: "Roboto", sans-serif;
+}
+
+.header__container {
+  background-color: #fff;
+}
+
+.header__content {
+  height: 75px;
+  width: 60vw;
+  min-width: 600px;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__title {
+  font-size: 26px;
+  font-weight: 500;
+  color: #3b5bdb;
+}
+
+input {
+  min-width: 60%;
+  max-width: 350px;
+}
+
+input::placeholder,
+select {
+  opacity: 1;
+  color: #737373;
+}
+
+.input__box {
+  font-size: 14px;
+  background-color: #ebebeb;
+
+  padding: 15px 20px;
+  border-radius: 6px;
+}
+
+.form__container,
+.tasks__container {
+  width: 60vw;
+  min-width: 600px;
+  max-width: 1000px;
+  margin: 30px auto;
+
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 35px;
+}
+
+.form__input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.form__input--text {
+  flex-grow: 1;
+}
+
+.form__input--priority {
+  flex-grow: 1;
+  min-width: calc(40% - 30px);
+  appearance: menulist-button;
+}
+
+button {
+  cursor: pointer;
+  transition: opacity 300ms;
+}
+
+.form__button--add-task {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+
+  background-color: #3b5bdb;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.form__button--add-task:hover {
+  opacity: 0.8;
+}
+
+.form__button--add-task:active {
+  transform: scale(0.98);
+}
+
+.tasks__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.task-info__container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.task-type {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.span-urgent {
+  background-color: #e40404;
+}
+
+.span-important {
+  background-color: #f3a703;
+}
+
+.span-normal {
+  background-color: #028302;
+}
+
+.task__item {
+  height: 60px;
+  border-radius: 6px;
+  padding: 15px;
+
+  background-color: #f1f3f5;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task__button--remove-task {
+  width: 15px;
+  height: 15px;
+  background: url("./assets/trash-icon.svg") center no-repeat;
+}
+
+.task__button--remove-task:hover {
+  opacity: 0.5;
+}
