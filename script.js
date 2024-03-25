@@ -18,11 +18,12 @@ function createTaskItem(taskObj) {
   span.classList.add("task-type");
   button.classList.add("task__button--remove-task");
 
-  if (taskObj.type === "Urgente") {
+  const type = taskObj.type.toLowerCase();
+  if (type === "urgente") {
     span.classList.add("span-urgent");
-  } else if (taskObj.type === "Importante") {
+  } else if (type === "importante") {
     span.classList.add("span-important");
-  } else if (taskObj.type === "Normal") {
+  } else if (type === "normal") {
     span.classList.add("span-normal");
   }
 
@@ -48,5 +49,22 @@ const tasks = [
   { title: "Pagar a conta de energia", type: "Urgente" },
   { title: "Assistir a um documentário interessante", type: "Normal" }
 ];
+
+const newTaskBtn = document.querySelector("button.form__button--add-task");
+const inputTitle = document.getElementById("input_title");
+const selectPriority = document.querySelector("select");
+
+newTaskBtn.addEventListener("click", e => {
+  e.preventDefault();
+  e.stopPropagation();
+  const title = inputTitle.value;
+  inputTitle.value = "";
+
+  const type = selectPriority.value;
+  selectPriority.value = "";
+  
+  tasks.push({ title, type });
+  renderElements(tasks);
+});
 
 renderElements(tasks);

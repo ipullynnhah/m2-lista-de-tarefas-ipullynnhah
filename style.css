@@ -38,6 +38,11 @@ select {
   color: #737373;
 }
 
+input:focus,
+select:focus {
+  outline: 2px solid #3b5bdb;
+}
+
 .input__box {
   font-size: 14px;
   background-color: #ebebeb;
