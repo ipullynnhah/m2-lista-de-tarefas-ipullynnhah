@@ -1,3 +1,11 @@
+function renderElements(arrTasks) {
+  const tasksList = document.querySelector("ul.tasks__list");
+  tasksList.innerHTML = "";
+  for (const task of arrTasks) {
+    tasksList.appendChild(createTaskItem(task));
+  }
+}
+
 function createTaskItem(taskObj) {
   const li = document.createElement("li");
   const div = document.createElement("div");
@@ -40,3 +48,5 @@ const tasks = [
   { title: "Pagar a conta de energia", type: "Urgente" },
   { title: "Assistir a um documentário interessante", type: "Normal" }
 ];
+
+renderElements(tasks);
